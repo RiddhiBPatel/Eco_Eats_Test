@@ -1,0 +1,59 @@
+<!DOCTYPE html5>
+
+{% load staticfiles %} <!-- New line -->
+
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Eco_Eats Feedback page</title>
+</head>
+<body>
+<div id="login_user"></div>
+<h1>Welcome to Eco Eats...</h1>
+
+
+<h3 style="padding-left:10px;">Feedback Form</h3>
+
+<form style="padding-left:10px;">
+    
+    <br/>
+    <textarea id="words" rows="10" cols="20" placeholder="Enter feedback here.."></textarea><br/>
+	<input type="button" onclick="getwords()" value="Submit" /> <br>
+	       
+	<br/>
+	 <div id="para" class="ds-fb">
+	 <div id="username" class="ds-un"></div>
+	 <div id="editFb" class="ds-ed" href=""></div>
+	 </div>
+	<br/>
+    
+</form>
+
+//getting feedback from database
+{% if feedbacks %}
+            <ul>
+                {% for Feedback in feedbacks %}
+                <li>{{ Feedback.feedback }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <strong>There are no feedback present.</strong>
+        {% endif %}
+
+
+
+<script type="text/javascript">
+function getwords() {
+  text = words.value;
+  document.getElementById("para").innerHTML += '<p>'+text
+  document.getElementById("subject").value = "Submit"
+  if(document.getElementById("username") != login_user)
+	document.getElementById("editFb").style.display = "block";
+  else
+	document.getElementById("editFb").style.display = "none";
+}
+</script>
+
+  
+</body>
+</html>

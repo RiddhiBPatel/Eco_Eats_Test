@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+{% load staticfiles %} <!-- New line -->
+
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Eco_Eats Login Page</title>
+</head>
+<body>
+<h1>Welcome to Eco Eats...</h1>
+<form method="post" style="padding-left:10px;">
+  Enter your Username:<br>
+  <input type="text" name="feedback" value="">
+  <br/><br/>
+  Enter your Password:<br>
+  <input type="password" name="pwd">
+  <br>
+  <br><br>
+   
+<button onclick="location.href='/Eco_Eats/add_feedback'" type="button">
+     Login</button>
+</form> 
+
+</body>
+</html>

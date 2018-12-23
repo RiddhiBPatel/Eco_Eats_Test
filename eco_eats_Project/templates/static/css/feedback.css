@@ -1,0 +1,24 @@
+.ds-fb{
+background-color: #dfe1df; 
+width: inherit; 
+height: 30px; 
+color: #131212; 
+font-size: 20px;
+}
+
+.ds-un{
+background-color: #979494; 
+color: #fff; 
+font-size: 20px; 
+padding-top: 5px; 
+float: right; 
+text-align: right;
+}
+
+.ds-ed{
+float:right; 
+padding-top:10px; 
+padding-left:3px; 
+background-color:white; 
+font-size:14px"
+}
